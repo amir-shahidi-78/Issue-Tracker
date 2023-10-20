@@ -1,12 +1,14 @@
-import { Button } from "@radix-ui/themes";
+import { Button, Flex } from "@radix-ui/themes";
 import { Pencil2Icon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const EditIssueButton = ({ issueId }: { issueId: number }) => {
   return (
-    <Button>
+    <Button className="flex w-full">
       <Pencil2Icon />
-      <Link href={`/issues/${issueId}/edit`}>Edit Issue</Link>
+      <Link className="" href={`/issues/edit/${issueId}`}>
+        Edit Issue
+      </Link>
     </Button>
   );
 };
