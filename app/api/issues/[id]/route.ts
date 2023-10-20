@@ -1,4 +1,4 @@
-import { IssueSchema, patchIssueSchema } from "@/app/IssueSchema";
+import { patchIssueSchema } from "@/app/IssueSchema";
 import prisma from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import delay from "delay";
