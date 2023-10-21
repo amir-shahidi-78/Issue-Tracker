@@ -1,5 +1,6 @@
 import useServerSession from "next-auth";
+import Pagination from "./components/Pagination";
 
 export default function Home() {
-  return <div>Hello World</div>;
+  return <Pagination itemCount={50} pageSize={10} currentPage={5} />;
 }
