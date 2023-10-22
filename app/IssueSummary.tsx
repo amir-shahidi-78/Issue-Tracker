@@ -1,5 +1,5 @@
 import { Status } from "@prisma/client";
-import { Flex, Card, Text } from "@radix-ui/themes";
+import { Flex, Card, Text, Box } from "@radix-ui/themes";
 import Link from "next/link";
 
 interface Props {
@@ -17,7 +17,14 @@ const IssueSummary = ({ open, inProgress, closed }: Props) => {
   return (
     <Flex gap="4">
       {containers.map((container) => (
-        <Card key={container.status}>
+        <Card
+          key={container.status}
+          className="realtive shadow-md overflow-hidden"
+        >
+          <Box className="absolute flex w-full h-0.5 top-0 left-0">
+            <Box className="relative w-1/2 h-full bg-gradient-to-l from-purple-600" />
+            <Box className="relative w-1/2 h-full bg-gradient-to-r from-purple-600" />
+          </Box>
           <Flex direction="column" gap="1" justify="center" align="center">
             <Link
               className="text-sm font-medium"

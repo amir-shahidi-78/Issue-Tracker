@@ -21,7 +21,7 @@ const IssueChart = ({ open, closed, inProgress }: Props) => {
           <XAxis dataKey="label" />
           <YAxis />
           <Bar
-            barSize={60}
+            barSize={70}
             dataKey="value"
             style={{ fill: "var(--accent-9)" }}
           />
